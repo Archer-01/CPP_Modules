@@ -35,6 +35,7 @@ class Contact
 			std::string num, std::string secret);
 		~Contact(void);
 		void				displayBrief(void) const;
+		void				displayAll(void) const;
 };
 
 #endif
