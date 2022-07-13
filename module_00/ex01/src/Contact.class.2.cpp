@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 17:58:43 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 11:37:14 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 12:49:37 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,29 @@ static void	displayField(std::string field)
 }
 
 /**
+ * @brief Calculate unsigned integer length in digits.
+ *
+ * @param num: Number to calculate length
+ * @return size_t: Number of digits
+ */
+static size_t	num_length(unsigned int num)
+{
+	size_t	len;
+
+	if (num == 0)
+	{
+		return (0);
+	}
+	len = 0;
+	while (num != 0)
+	{
+		num /= 10;
+		++len;
+	}
+	return (len);
+}
+
+/**
  * @brief Convert unsigned int to string format
  *
  * @param num: Unsigned integer to convert.
@@ -56,6 +79,7 @@ static void	displayField(std::string field)
 static std::string	to_string(unsigned int num)
 {
 	std::string	result;
+	size_t		num_len;
 
 	if (num == 0)
 	{
@@ -63,11 +87,13 @@ static std::string	to_string(unsigned int num)
 	}
 	else
 	{
+		num_len = num_length(num);
 		result = "";
-		while (num != 0)
+		while (num_len != 0)
 		{
-			result += ((num % 10) + '0');
-			num /= 10;
+			result += (num / pow(10, num_len - 1)) + '0';
+			num %= (size_t) pow(10, num_len - 1);
+			--num_len;
 		}
 	}
 	return (result);
