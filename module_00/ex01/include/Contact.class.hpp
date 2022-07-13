@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:01:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/12 19:50:50 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 11:32:16 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Contact
 		Contact(std::string fname, std::string lname, std::string nname, \
 			std::string num, std::string secret);
 		~Contact(void);
-		void				display(void) const;
+		void				displayBrief(void) const;
 };
 
 #endif

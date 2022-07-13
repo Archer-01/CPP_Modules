@@ -66,10 +66,11 @@ static std::string	to_string(unsigned int num)
 }
 
 /**
- * @brief Display contact information (ID, first name, last name and nickname)
+ * @brief Display brief contact information (ID, first name, last name and
+ * nickname)
  *
  */
-void	Contact::display(void) const
+void	Contact::displayBrief(void) const
 {
 	displayField(to_string(this->_id));
 	std::cout << "|";
@@ -79,4 +80,5 @@ void	Contact::display(void) const
 	std::cout << "|";
 	displayField(this->_nickname);
 	std::cout << std::endl;
+	return ;
 }
