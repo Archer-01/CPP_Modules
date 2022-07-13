@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:08:52 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/12 19:51:17 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 13:07:24 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,15 @@ Contact::Contact(std::string fname, std::string lname, std::string nname, \
 		_nickname(nname),
 		_phone_num(num),
 		_darkest_secret(secret)
+{
+	// Empty body
+}
+
+/**
+ * @brief Contact default constructor.
+ *
+ */
+Contact::Contact(void)
 {
 	// Empty body
 }

@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:01:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 11:32:16 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 12:35:15 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Contact
 		std::string			_darkest_secret;
 
 	public:
+		Contact(void);
 		Contact(std::string fname, std::string lname, std::string nname, \
 			std::string num, std::string secret);
 		~Contact(void);
