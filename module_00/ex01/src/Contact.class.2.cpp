@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 17:58:43 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/12 19:54:39 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 11:37:14 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static void	modifyOutputStream(void)
 	std::cout << std::right;
 	std::cout << std::setw(10);
 	std::cout << std::setfill('.');
+	return ;
 }
 
 /**
@@ -43,8 +44,15 @@ static void	displayField(std::string field)
 	{
 		std::cout << field.substr(0, 9) + ".";
 	}
+	return ;
 }
 
+/**
+ * @brief Convert unsigned int to string format
+ *
+ * @param num: Unsigned integer to convert.
+ * @return std::string: Converted string.
+ */
 static std::string	to_string(unsigned int num)
 {
 	std::string	result;
