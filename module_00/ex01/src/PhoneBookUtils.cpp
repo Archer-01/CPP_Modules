@@ -61,3 +61,25 @@ void	PhoneBookUtils::ADD(PhoneBook *phonebook)
 	std::cout << "Contact added successfully!" << std::endl;
 	return ;
 }
+
+void	PhoneBookUtils::SEARCH(PhoneBook *phonebook)
+{
+	Contact			c;
+	std::string		id_str;
+	int				id;
+
+	phonebook->displayContacts();
+	id_str = getField(SEARCH_ID);
+	id = std::atoi(id_str.c_str());
+	if (phonebook->hasContact(id) == false)
+	{
+		std::cout << "Contact no." << id << " does not exist" << std::endl;
+		return ;
+	}
+	else
+	{
+		c = phonebook->getContact((unsigned int) id);
+		c.displayAll();
+	}
+	return ;
+}

@@ -6,20 +6,20 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:08:52 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 13:07:24 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/14 14:22:49 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
 
-unsigned int Contact::_next_id = 0;
+int Contact::_next_id = 0;
 
 /**
  * @brief Get contact next ID
  *
  * @return int: next ID
  */
-unsigned int	Contact::_getNextId(void)
+int	Contact::_getNextId(void)
 {
 	Contact::_next_id += 1;
 	return (Contact::_next_id);

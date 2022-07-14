@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:01:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 13:18:34 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/16 18:02:18 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 class Contact
 {
 	private:
-		static unsigned int	_next_id;
-		static unsigned int	_getNextId(void);
+		static int			_next_id;
+		static int			_getNextId(void);
 
-		unsigned int		_id;
+		int					_id;
 		std::string			_first_name;
 		std::string			_last_name;
 		std::string			_nickname;
