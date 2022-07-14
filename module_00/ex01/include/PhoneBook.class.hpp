@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 12:02:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 12:18:36 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/14 10:52:07 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class PhoneBook
 		~PhoneBook(void);
 		void	addContact(Contact newcontact);
 		void	displayContacts(void) const;
+		bool	hasContact(unsigned int id) const;
+		Contact	getContact(unsigned int id) const;
 };
 
 #endif

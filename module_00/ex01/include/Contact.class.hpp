@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:01:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/13 12:35:15 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/13 13:18:34 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Contact
 		~Contact(void);
 		void				displayBrief(void) const;
 		void				displayAll(void) const;
+		unsigned int		getId(void) const;
 };
 
 #endif
