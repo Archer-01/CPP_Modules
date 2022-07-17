@@ -1,3 +1,4 @@
 *.log
+!19920104_091532.log
 accounts
 *.test.cpp
