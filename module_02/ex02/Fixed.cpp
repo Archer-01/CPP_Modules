@@ -134,17 +134,15 @@ bool	Fixed::operator<=(Fixed const &fixed) const
 
 Fixed	Fixed::operator+(Fixed const &fixed) const
 {
-	Fixed	result(*this);
+	Fixed	result(this->toFloat() + fixed.toFloat());
 
-	result._value += fixed._value;
 	return (result);
 }
 
 Fixed	Fixed::operator-(Fixed const &fixed) const
 {
-	Fixed	result(*this);
+	Fixed	result(this->toFloat() - fixed.toFloat());
 
-	result._value -= fixed._value;
 	return (result);
 }
 
@@ -157,9 +155,8 @@ Fixed	Fixed::operator*(Fixed const &fixed) const
 
 Fixed	Fixed::operator/(Fixed const &fixed) const
 {
-	Fixed	result(*this);
+	Fixed	result(this->toFloat() / fixed.toFloat());
 
-	result._value /= fixed._value;
 	return (result);
 }
 
