@@ -17,15 +17,13 @@ ScavTrap::ScavTrap(void) : ClapTrap("scav_trap")
 	this->_hit_points = 100;
 	this->_energy_points = 50;
 	this->_attack_damage = 20;
-	std::cout << "ScavTrap " << this->_name << " is created";
-	std::cout << std::endl;
+	std::cout << "ScavTrap " << this->_name << " is created" << std::endl;
 	return ;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &scavtrap) : ClapTrap(scavtrap)
 {
-	std::cout << "ScavTrap " << this->_name << " is copied";
-	std::cout << std::endl;
+	std::cout << "ScavTrap " << this->_name << " is copied" << std::endl;
 	return ;
 }
 
@@ -43,15 +41,13 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_hit_points = 100;
 	this->_energy_points = 50;
 	this->_attack_damage = 20;
-	std::cout << "ScavTrap " << this->_name << " is created";
-	std::cout << std::endl;
+	std::cout << "ScavTrap " << this->_name << " is created" << std::endl;
 	return ;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << this->_name << " is destroyed";
-	std::cout << std::endl;
+	std::cout << "ScavTrap " << this->_name << " is destroyed" << std::endl;
 	return ;
 }
 
@@ -101,7 +97,7 @@ void	ScavTrap::takeDamage(unsigned int amount)
 
 void	ScavTrap::guardGate(void) const
 {
-	std::cout << "ScavTrap " << this->_name;
-	std::cout << " switched to gatekeeper mode!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << "switched to gatekeeper mode";
+	std::cout << std::endl;
 	return ;
 }
