@@ -16,7 +16,7 @@ OBJ_DIR			:= obj
 NAME			:= fragtrap
 SRC				:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ				:= $(SRC:.cpp=.o)
-INC				:= ClapTrap.hpp
+INC				:= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
