@@ -55,7 +55,8 @@ void	ScavTrap::attack(std::string const &target)
 {
 	if (this->_energy_points == 0)
 	{
-		std::cout << "0 energy points, attack failed" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is out of energy";
+		std::cout << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << this->_name << " attacks " << target;
@@ -69,7 +70,8 @@ void	ScavTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energy_points == 0)
 	{
-		std::cout << "0 energy points, repair failed" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is out of energy";
+		std::cout << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << this->_name << " gains " << amount;
