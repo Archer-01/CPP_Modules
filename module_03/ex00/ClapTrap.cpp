@@ -107,6 +107,6 @@ std::string	ClapTrap::getName(void) const
 void	ClapTrap::showStats(void) const
 {
 	std::cout << this->_name << "\t| HP=" << this->_hit_points;
-	std::cout << "\t| EP=" << this->_energy_points << " |" << std::endl;
+	std::cout << " | EP=" << this->_energy_points << " |" << std::endl;
 	return ;
 }
