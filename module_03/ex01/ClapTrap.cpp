@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:10:27 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/21 19:05:30 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/22 08:01:30 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap " << this->_name << " gains " << amount;
 	std::cout << " points of health !" << std::endl;
 	this->_hit_points += amount;
-	if (this->_hit_points > 10)
-	{
-		this->_hit_points = 10;
-	}
 	--(this->_energy_points);
 	return ;
 }
