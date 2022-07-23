@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.class.cpp                                 :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 15:20:15 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 15:24:37 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/23 18:08:56 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/23 18:09:03 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.class.hpp"
+#include "AMateria.hpp"
 
 AMateria::AMateria(void) : _type("amateria")
 {

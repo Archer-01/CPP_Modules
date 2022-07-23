@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.class.hpp                                 :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 15:16:44 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:06:08 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/23 18:08:31 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/23 18:08:40 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_CLASS_HPP
-# define AMATERIA_CLASS_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 # include <string>
 # include <iostream>

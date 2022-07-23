@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.class.hpp                                      :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 15:30:13 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 15:36:39 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/23 18:09:27 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/23 18:09:37 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_CLASS_HPP
-# define ICE_CLASS_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-#include "AMateria.class.hpp"
+#include "AMateria.hpp"
 
 class Ice : public AMateria
 {
