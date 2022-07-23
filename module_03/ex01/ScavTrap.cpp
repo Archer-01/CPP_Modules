@@ -53,7 +53,13 @@ ScavTrap::~ScavTrap(void)
 
 void	ScavTrap::attack(std::string const &target)
 {
-	if (this->_energy_points == 0)
+	if (this->_hit_points == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is already dead";
+		std::cout << std::endl;
+		return ;
+	}
+	else if (this->_energy_points == 0)
 	{
 		std::cout << "ScavTrap " << this->_name << " is out of energy";
 		std::cout << std::endl;

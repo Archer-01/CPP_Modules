@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:10:27 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/22 08:01:57 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 10:11:28 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,12 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &claptrap)
 
 void	ClapTrap::attack(std::string const &target)
 {
-	if (this->_energy_points == 0)
+	if (this->_hit_points == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " is dead" << std::endl;
+		return ;
+	}
+	else if (this->_energy_points == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is out of energy";
 		std::cout << std::endl;
@@ -86,7 +91,12 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_energy_points == 0)
+	if (this->_hit_points == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " is dead" << std::endl;
+		return ;
+	}
+	else if (this->_energy_points == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is out of energy";
 		std::cout << std::endl;
