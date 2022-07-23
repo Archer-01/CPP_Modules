@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:20 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 20:33:47 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 21:23:52 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "AMateria.hpp"
 # include "Cure.hpp"
 # include "Ice.hpp"
-# include <cstdlib>
+# include <cstring>
 # include <string>
 
 class Character : public ICharacter
