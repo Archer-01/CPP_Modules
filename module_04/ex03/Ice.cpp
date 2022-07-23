@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:09:51 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:09:55 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:20:25 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice(void) : AMateria("ice")
 	return ;
 }
 
-Ice::Ice(Ice const &src) : AMateria("ice")
+Ice::Ice(Ice const &src)
 {
 	std::cout << "Ice copy constructor called" << std::endl;
 	return ;
@@ -32,7 +32,7 @@ Ice::~Ice(void)
 
 Ice	&Ice::operator=(Ice const &rhs)
 {
-	this->_type = rhs._type;
+	(void) rhs;
 	return (*this);
 }
 
