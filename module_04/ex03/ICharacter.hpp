@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:12:47 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:12:58 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:29:02 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 
 class AMateria;
+# include "AMateria.hpp"
 
 class ICharacter
 {

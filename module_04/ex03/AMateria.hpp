@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:08:31 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:08:40 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:32:33 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <iostream>
 
 class ICharacter;
+# include "ICharacter.hpp"
+
 class AMateria
 {
 	protected:
