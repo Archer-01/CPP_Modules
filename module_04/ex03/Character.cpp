@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:15:04 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 20:02:05 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 20:35:26 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,43 @@ Character::~Character(void)
 		delete this->_inventory[i];
 	}
 	std::cout << "Character destructor called" << std::endl;
+	return ;
+}
+
+std::string const	&Character::getName(void) const
+{
+	return (this->_name);
+}
+
+void	Character::equip(AMateria *m)
+{
+	if (this->_materia_count < 4)
+	{
+		for (short i = 0; i < this->_materia_count; ++i)
+		{
+			if (this->_inventory[i] == NULL)
+			{
+				this->_inventory[i] = m;
+				++(this->_materia_count);
+				return ;
+			}
+		}
+	}
+	return ;
+}
+
+void	Character::unequip(int idx)
+{
+	this->_inventory[idx] = NULL;
+	--(this->_materia_count);
+	return ;
+}
+
+void	Character::use(int idx, ICharacter &target) const
+{
+	if (this->_inventory[idx] != NULL)
+	{
+		this->_inventory[idx]->use(target);
+	}
 	return ;
 }

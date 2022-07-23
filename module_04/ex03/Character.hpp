@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:20 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 20:07:00 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 20:33:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ class Character : public ICharacter
 		Character(Character const &src);
 		~Character(void);
 		Character	&operator=(Character const &rhs);
+		virtual std::string	const	&getName(void) const;
+		virtual void				equip(AMateria *m);
+		virtual void				unequip(int idx);
+		virtual void				use(int idx, ICharacter &target) const;
 };
 
 #endif

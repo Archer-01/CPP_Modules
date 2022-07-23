@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:12:47 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:29:02 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 20:37:39 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ICharacter
 		virtual std::string const	&getName(void) const = 0;
 		virtual void				equip(AMateria *m) = 0;
 		virtual void				unequip(int idx) = 0;
-		virtual void				use(int idx, ICharacter &target) = 0;
+		virtual void				use(int idx, ICharacter &target) const = 0;
 };
 
 #endif
