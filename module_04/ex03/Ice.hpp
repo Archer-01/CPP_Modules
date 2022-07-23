@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:09:27 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:09:37 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:22:19 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ class Ice : public AMateria
 		~Ice(void);
 		Ice	&operator=(Ice const &rhs);
 		virtual AMateria	*clone(void) const;
-		// TODO: Implement me
-		// virtual void		use(ICharacter &target);
+		virtual void		use(ICharacter &target);
 };
 
 #endif

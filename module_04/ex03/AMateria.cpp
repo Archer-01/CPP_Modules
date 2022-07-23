@@ -47,3 +47,10 @@ std::string const	&AMateria::getType(void) const
 {
 	return (this->_type);
 }
+
+void	AMateria::use(ICharacter &target)
+{
+	(void) target;
+	std::cout << "* materia being used *" << std::endl;
+	return ;
+}

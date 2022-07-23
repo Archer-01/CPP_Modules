@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:10:12 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:10:23 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:34:15 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ class Cure : public AMateria
 		~Cure(void);
 		Cure	&operator=(Cure const &rhs);
 		virtual AMateria	*clone(void) const;
-		// TODO: Implenent me
-		// virtual void		use(ICharacter &target);
+		virtual void		use(ICharacter &target);
 };
 
 #endif
