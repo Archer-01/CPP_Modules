@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 11:00:26 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 14:38:19 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 14:48:56 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,16 @@ int	main(void)
 // 	delete j;//should not create a leak
 // 	delete i;
 // 	return 0;
+// }
+
+// * Copy Test
+// int	main(void)
+// {
+// 	Animal const	*dog1 = new Dog();
+// 	Animal			dog2;
+
+// 	dog2 = *dog1;
+// 	delete dog1;
+// 	dog2.makeSound();
+// 	return (0);
 // }
