@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:09:51 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:26:51 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:58:48 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Ice	&Ice::operator=(Ice const &rhs)
 
 AMateria	*Ice::clone(void) const
 {
-	return (new Ice(*this));
+	return (new Ice());
 }
 
 void	Ice::use(ICharacter &target)
