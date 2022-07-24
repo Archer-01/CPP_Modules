@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:20 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 21:23:52 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 10:09:58 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Character : public ICharacter
 		virtual void				equip(AMateria *m);
 		virtual void				unequip(int idx);
 		virtual void				use(int idx, ICharacter &target) const;
+		AMateria					*getMateria(int idx) const;
 };
 
 #endif

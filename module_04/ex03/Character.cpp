@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:15:04 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 09:34:55 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 10:10:16 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,4 +111,9 @@ void	Character::use(int idx, ICharacter &target) const
 		this->_inventory[idx]->use(target);
 	}
 	return ;
+}
+
+AMateria	*Character::getMateria(int idx) const
+{
+	return (this->_inventory[idx]);
 }
