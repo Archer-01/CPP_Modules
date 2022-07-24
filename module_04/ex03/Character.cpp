@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:15:04 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 20:35:26 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 06:58:35 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,13 @@ Character::Character(Character const &src) :
 	_name(src._name),
 	_materia_count(src._materia_count)
 {
-	for (short i = 0; i < this->_materia_count; ++i)
+
+	for (int i = 0; i < 4; ++i)
 	{
 		delete this->_inventory[i];
-		if (src._inventory[i]->getType() == "ice")
+		if (src._inventory[i] != NULL)
 		{
-			this->_inventory[i] = new Ice();
-		}
-		else if (src._inventory[i]->getType() == "cure")
-		{
-			this->_inventory[i] = new Cure();
+			this->_inventory[i] = src._inventory[i]->clone();
 		}
 		else
 		{
@@ -56,16 +53,12 @@ Character	&Character::operator=(Character const &rhs)
 	{
 		this->_name = rhs._name;
 		this->_materia_count = rhs._materia_count;
-		for (short i = 0; i < this->_materia_count; ++i)
+		for (short i = 0; i < 4; ++i)
 		{
 			delete this->_inventory[i];
-			if (rhs._inventory[i]->getType() == "ice")
+			if (rhs._inventory[i] != NULL)
 			{
-				this->_inventory[i] = new Ice();
-			}
-			else if (rhs._inventory[i]->getType() == "cure")
-			{
-				this->_inventory[i] = new Cure();
+				this->_inventory[i] = rhs._inventory[i]->clone();
 			}
 			else
 			{
@@ -78,7 +71,7 @@ Character	&Character::operator=(Character const &rhs)
 
 Character::~Character(void)
 {
-	for (short i = 0; i < this->_materia_count; ++i)
+	for (short i = 0; i < 4; ++i)
 	{
 		delete this->_inventory[i];
 	}
