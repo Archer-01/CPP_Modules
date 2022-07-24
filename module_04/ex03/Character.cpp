@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:15:04 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 06:58:35 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 09:30:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	Character::equip(AMateria *m)
 {
 	if (this->_materia_count < 4)
 	{
-		for (short i = 0; i < this->_materia_count; ++i)
+		for (short i = 0; i < 4; ++i)
 		{
 			if (this->_inventory[i] == NULL)
 			{
