@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:21:37 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 08:59:01 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 09:10:25 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,33 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &rhs)
 		}
 	}
 	return (*this);
+}
+
+void	MateriaSource::learnMateria(AMateria *m)
+{
+	if (this->_materia_count < 4)
+	{
+		for (short i = 0; i < 4; ++i)
+		{
+			if (this->_materias[i] == NULL)
+			{
+				this->_materias[i] = m;
+				++(this->_materia_count);
+				return ;
+			}
+		}
+	}
+	return ;
+}
+
+AMateria	*MateriaSource::createMateria(std::string const &type) const
+{
+	for (short i = 0; i < 4; ++i)
+	{
+		if (this->_materias[i] != NULL && this->_materias[i]->getType() == type)
+		{
+			return (this->_materias[i]->clone());
+		}
+	}
+	return (NULL);
 }

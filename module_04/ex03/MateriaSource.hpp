@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:19:21 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 21:31:53 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 09:10:29 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define MATERIASOURCE_HPP
 
 # include "IMateriaSource.hpp"
-# include "Ice.hpp"
-# include "Cure.hpp"
+# include "AMateria.hpp"
 # include <iostream>
 # include <cstring>
+# include <string>
 
 class MateriaSource : public IMateriaSource
 {
@@ -29,7 +29,9 @@ class MateriaSource : public IMateriaSource
 		MateriaSource(void);
 		MateriaSource(MateriaSource const &src);
 		~MateriaSource(void);
-		MateriaSource	&operator=(MateriaSource const &rhs);
+		MateriaSource		&operator=(MateriaSource const &rhs);
+		virtual void		learnMateria(AMateria *m);
+		virtual AMateria	*createMateria(std::string const &type) const;
 };
 
 #endif
