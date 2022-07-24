@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 11:14:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 14:18:02 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 18:35:04 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ Cat::~Cat(void)
 Cat	&Cat::operator=(Cat const &cat)
 {
 	this->_type = cat._type;
+	delete this->_brain;
+	this->_brain = new Brain();
+	*(this->_brain) = *cat._brain;
 	return (*this);
 }
 

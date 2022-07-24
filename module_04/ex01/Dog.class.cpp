@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 11:13:18 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 13:39:53 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 18:34:19 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ Dog::~Dog(void)
 Dog	&Dog::operator=(Dog const &dog)
 {
 	this->_type = dog._type;
+	delete this->_brain;
+	this->_brain = new Brain();
+	*(this->_brain) = *dog._brain;
 	return (*this);
 }
 
