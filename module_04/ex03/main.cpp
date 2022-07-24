@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 09:14:20 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 09:31:59 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 10:20:52 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include "MateriaSource.hpp"
 #include <iostream>
 
+// * Default Test
 int	main(void)
 {
 	IMateriaSource	*src = new MateriaSource();
@@ -41,3 +42,18 @@ int	main(void)
 	delete src;
 	return (0);
 }
+
+// * Character Test
+// int	main(void)
+// {
+// 	ICharacter	*me = new Character("me");
+// 	AMateria	*tmp;
+
+// 	me->equip(new Ice());
+// 	me->equip(new Cure());
+// 	tmp = me->getMateria(0);
+// 	me->unequip(0);
+// 	delete tmp;
+// 	delete me;
+// 	return (0);
+// }
