@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:15:04 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 09:30:47 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 09:34:55 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 Character::Character(void) : _name("default"), _materia_count(0)
 {
 	bzero(_inventory, 4 * sizeof(AMateria *));
-	std::cout << "Character default constructor called" << std::endl;
 	return ;
 }
 
 Character::Character(std::string const &name) : _name(name), _materia_count(0)
 {
 	bzero(this->_inventory, 4 * sizeof(AMateria *));
-	std::cout << "Character constructor called" << std::endl;
 	return ;
 }
 
@@ -43,7 +41,6 @@ Character::Character(Character const &src) :
 			this->_inventory[i] = NULL;
 		}
 	}
-	std::cout << "Character copy constructor called" << std::endl;
 	return ;
 }
 
@@ -75,7 +72,6 @@ Character::~Character(void)
 	{
 		delete this->_inventory[i];
 	}
-	std::cout << "Character destructor called" << std::endl;
 	return ;
 }
 

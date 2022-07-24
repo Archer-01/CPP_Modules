@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:10:40 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/23 18:58:56 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/24 09:40:53 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,18 @@
 
 Cure::Cure(void) : AMateria("cure")
 {
-	std::cout << "Cure default constructor called" << std::endl;
-	return ;
+	// Empty body
 }
 
-Cure::Cure(Cure const &src)
+Cure::Cure(Cure const &src) : AMateria("cure")
 {
 	(void) src;
-	std::cout << "Cure copy constructor called" << std::endl;
 	return ;
 }
 
 Cure::~Cure(void)
 {
-	std::cout << "Cure destructor called" << std::endl;
-	return ;
+	// Empty body
 }
 
 Cure	&Cure::operator=(Cure const &rhs)
