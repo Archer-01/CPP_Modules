@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:08:24 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 21:42:45 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 06:55:44 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &src) :
 	_name(src._name),
 	_grade(src._grade)
 {
-	if (this->_grade < 1)
-	{
-		throw Bureaucrat::GradeTooHighException();
-	}
-	else if (this->_grade > 150)
-	{
-		throw Bureaucrat::GradeTooLowException();
-	}
+	// Empty body
 }
 
 Bureaucrat::Bureaucrat(std::string const &name, short grade) :
