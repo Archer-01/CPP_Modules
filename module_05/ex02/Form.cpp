@@ -24,6 +24,12 @@ Form::GradeTooLowException::GradeTooLowException(void) :
 	// Empty body
 }
 
+Form::FormNotSignedexception::FormNotSignedexception(void) :
+	std::runtime_error("Form not signed")
+{
+	// Empty body
+}
+
 Form::Form(void) :
 	_name("Form"),
 	_isSigned(false),
@@ -129,6 +135,10 @@ std::ostream	&operator<<(std::ostream &out, Form const &rhs)
 
 void	Form::checkGradeToExecute(Bureaucrat const &bureaucrat) const
 {
+	if (this->_isSigned == false)
+	{
+		throw Form::FormNotSignedexception();
+	}
 	if (bureaucrat.getGrade() > this->_gradeToExecute)
 	{
 		throw Form::GradeTooLowException();

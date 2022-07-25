@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 07:28:25 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 10:57:38 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 11:08:37 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,6 @@
 class ShrubberyCreationForm : public Form
 {
 	private:
-		class FormNotSignedexception : public std::runtime_error
-		{
-			public:
-				FormNotSignedexception(void);
-		};
-
 		std::string	_target;
 
 	public:

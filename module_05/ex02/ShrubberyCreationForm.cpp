@@ -6,17 +6,11 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 08:28:51 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 10:59:53 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 11:09:08 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
-
-ShrubberyCreationForm::FormNotSignedexception::FormNotSignedexception(void) :
-	std::runtime_error("Form not signed")
-{
-	// Empty body
-}
 
 ShrubberyCreationForm::ShrubberyCreationForm(void) :
 	Form("ShrubberyCreationForm", 145, 137),
@@ -58,10 +52,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	std::ofstream	file;
 
-	if (this->getIsSigned() == false)
-	{
-		throw ShrubberyCreationForm::FormNotSignedexception();
-	}
 	this->checkGradeToExecute(executor);
 	file.open(this->_target + "_shrubbery");
 	if (file.is_open() == false)

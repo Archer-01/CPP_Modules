@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 20:26:32 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 10:55:33 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 11:07:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ class Form
 		{
 			public:
 				GradeTooLowException(void);
+		};
+
+		class FormNotSignedexception : public std::runtime_error
+		{
+			public:
+				FormNotSignedexception(void);
 		};
 
 		std::string const	_name;
