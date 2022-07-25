@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 07:28:25 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 11:08:37 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 11:42:20 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(ShrubberyCreationForm const &src);
 		ShrubberyCreationForm(std::string const &target);
-		~ShrubberyCreationForm(void);
+		virtual ~ShrubberyCreationForm(void);
 		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &rhs);
 		void					execute(Bureaucrat const &executor) const;
 };

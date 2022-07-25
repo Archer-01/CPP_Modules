@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 20:26:32 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 11:07:45 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 11:39:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ class Form
 		Form(Form const &src);
 		Form(std::string const &name, short const gradeToSign, \
 			short const gradeToExecute);
-		~Form(void);
+		virtual ~Form(void);
 		Form				&operator=(Form const &rhs);
 		std::string const	&getName(void) const;
 		bool				getIsSigned(void) const;
