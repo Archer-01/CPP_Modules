@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:08:24 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 07:02:13 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 13:11:55 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,4 +118,11 @@ void	Bureaucrat::signForm(Form const &form)
 		std::cout << " because his grade is too low." << std::endl;
 		return ;
 	}
+}
+
+void	Bureaucrat::executeForm(Form const &form) const
+{
+	form.execute(*this);
+	std::cout << this->_name << " executed " << form.getName() << std::endl;
+	return ;
 }

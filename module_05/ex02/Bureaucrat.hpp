@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:00:09 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/24 21:44:37 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 13:10:15 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ class Bureaucrat
 		void				incrementGrade(void);
 		void				decrementGrade(void);
 		void				signForm(Form const &form);
+		void				executeForm(Form const &form) const;
 };
 
 std::ostream	&operator<<(std::ostream &o, Bureaucrat const &rhs);
