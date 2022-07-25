@@ -126,3 +126,12 @@ std::ostream	&operator<<(std::ostream &out, Form const &rhs)
 	out << " / Grade to execute: " << rhs.getGradeToExecute();
 	return (out);
 }
+
+void	Form::checkGradeToExecute(Bureaucrat const &bureaucrat) const
+{
+	if (bureaucrat.getGrade() > this->_gradeToExecute)
+	{
+		throw Form::GradeTooLowException();
+	}
+	return ;
+}

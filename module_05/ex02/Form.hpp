@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 20:26:32 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 10:51:55 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 10:55:33 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ class Form
 		short				getGradeToExecute(void) const;
 		void				beSigned(Bureaucrat const &bureaucrat);
 		virtual void		execute(Bureaucrat const &executor) const = 0;
+		void				checkGradeToExecute(Bureaucrat const &bureaucrat) \
+			const;
 };
 
 std::ostream	&operator<<(std::ostream &out, Form const &rhs);
