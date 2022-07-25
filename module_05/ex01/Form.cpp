@@ -122,7 +122,7 @@ std::ostream	&operator<<(std::ostream &out, Form const &rhs)
 	{
 		out << "Not signed";
 	}
-	out << "] - Grade: " << rhs.getGradeToSign() << " / ";
-	out << rhs.getGradeToExecute();
+	out << "] - Grade to sign: " << rhs.getGradeToSign();
+	out << " / Grade to execute: " << rhs.getGradeToExecute();
 	return (out);
 }
