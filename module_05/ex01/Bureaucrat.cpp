@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:08:24 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 06:55:44 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 07:02:13 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ void	Bureaucrat::signForm(Form const &form)
 	else
 	{
 		std::cout << this->_name << " couldn't sign " << form.getName();
-		std::cout << " because it is not signed." << std::endl;
+		std::cout << " because his grade is too low." << std::endl;
 		return ;
 	}
 }
