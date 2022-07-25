@@ -103,19 +103,12 @@ short	Form::getGradeToExecute(void) const
 
 void	Form::beSigned(Bureaucrat const &bureaucrat)
 {
-	if (bureaucrat.getGrade() < 1)
-	{
-		throw Form::GradeTooHighException();
-	}
-	else if (bureaucrat.getGrade() > 150)
+	if (bureaucrat.getGrade() > this->_gradeToSign)
 	{
 		throw Form::GradeTooLowException();
 	}
-	else
-	{
-		this->_isSigned = true;
-		return ;
-	}
+	this->_isSigned = true;
+	return ;
 }
 
 std::ostream	&operator<<(std::ostream &out, Form const &rhs)
