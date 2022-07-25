@@ -15,10 +15,12 @@ OBJ_DIR			:= obj
 # *********************************** Files ************************************
 NAME			:= intern
 SRC				:= Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-					RobotomyRequestForm.cpp PresidentialPardonForm.cpp main.cpp
+					RobotomyRequestForm.cpp PresidentialPardonForm.cpp \
+					Intern.cpp main.cpp
 OBJ				:= $(SRC:.cpp=.o)
 INC				:= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp \
-					RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+					RobotomyRequestForm.hpp PresidentialPardonForm.hpp \
+					Intern.hpp
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
