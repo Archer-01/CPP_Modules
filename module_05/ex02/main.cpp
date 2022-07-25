@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 20:10:40 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/25 13:06:37 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/25 13:13:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(void)
 	{
 		shrub.beSigned(me);
 		me.signForm(shrub);
-		shrub.execute(me);
+		me.executeForm(shrub);
 	}
 	catch (std::exception const &exception)
 	{
@@ -47,7 +47,7 @@ int	main(void)
 // 	{
 // 		robotomyRequestForm.beSigned(me);
 // 		me.signForm(robotomyRequestForm);
-// 		robotomyRequestForm.execute(me);
+// 		me.executeForm(robotomyRequestForm);
 // 	}
 // 	catch(std::exception const &exception)
 // 	{
@@ -68,7 +68,7 @@ int	main(void)
 // 	{
 // 		form.beSigned(me);
 // 		me.signForm(form);
-// 		form.execute(me);
+// 		me.executeForm(form);
 // 	}
 // 	catch(std::exception const &exception)
 // 	{
