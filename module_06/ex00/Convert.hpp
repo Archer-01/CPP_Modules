@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:00:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:55:07 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 18:35:02 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 # define CONVERT_HPP
 
 # include <string>
+# include <iostream>
 # include "Parsing.hpp"
 
-typedef enum e_types
+namespace Convert
 {
-	CHAR_TYPE,
-	INT_TYPE,
-	FLOAT_TYPE,
-	DOUBLE_TYPE,
-	UNKNOWN_TYPE
-}	t_types;
+	typedef enum e_types
+	{
+		CHAR_TYPE,
+		INT_TYPE,
+		FLOAT_TYPE,
+		DOUBLE_TYPE,
+		UNKNOWN_TYPE
+	}	t_types;
 
-t_types	getType(std::string const &literal);
+	t_types	getType(std::string const &literal);
+	void	convertChar(std::string const &literal);
+}
 
 #endif

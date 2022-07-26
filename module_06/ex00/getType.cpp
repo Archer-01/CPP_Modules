@@ -6,36 +6,36 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:00:11 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:54:57 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 18:38:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "convert.hpp"
+#include "Convert.hpp"
 
-t_types	getType(std::string const &literal)
+Convert::t_types	Convert::getType(std::string const &literal)
 {
 	if (literal.empty() == true)
 	{
-		return (UNKNOWN_TYPE);
+		return (Convert::UNKNOWN_TYPE);
 	}
 	else if (Parsing::parseChar(literal) == true)
 	{
-		return (CHAR_TYPE);
+		return (Convert::CHAR_TYPE);
 	}
 	else if (Parsing::parseInt(literal) == true)
 	{
-		return (INT_TYPE);
+		return (Convert::INT_TYPE);
 	}
 	else if (Parsing::parseFloat(literal))
 	{
-		return (FLOAT_TYPE);
+		return (Convert::FLOAT_TYPE);
 	}
 	else if (Parsing::parseDouble(literal))
 	{
-		return (DOUBLE_TYPE);
+		return (Convert::DOUBLE_TYPE);
 	}
 	else
 	{
-		return (UNKNOWN_TYPE);
+		return (Convert::UNKNOWN_TYPE);
 	}
 }

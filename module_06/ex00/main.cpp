@@ -6,12 +6,12 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:06:53 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:34:41 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 18:37:46 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "convert.hpp"
+#include "Convert.hpp"
 
 int	main(int argc, char **argv)
 {
@@ -20,24 +20,24 @@ int	main(int argc, char **argv)
 		std::cerr << "Usage: ./convert <char|int|float|double>" << std::endl;
 		return (1);
 	}
-	switch(getType(argv[1]))
+	switch(Convert::getType(argv[1]))
 	{
-		case (CHAR_TYPE):
+		case (Convert::CHAR_TYPE):
 		{
-			std::cout << "CHAR" << std::endl;
+			Convert::convertChar(argv[1]);
 			break;
 		}
-		case (FLOAT_TYPE):
+		case (Convert::FLOAT_TYPE):
 		{
 			std::cout << "FLOAT" << std::endl;
 			break;
 		}
-		case (INT_TYPE):
+		case (Convert::INT_TYPE):
 		{
 			std::cout << "INT" << std::endl;
 			break;
 		}
-		case (DOUBLE_TYPE):
+		case (Convert::DOUBLE_TYPE):
 		{
 			std::cout << "DOUBLE" << std::endl;
 			break;
