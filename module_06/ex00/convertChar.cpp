@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 18:32:38 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 18:45:38 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 19:09:07 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	displayChar(char c)
 	std::cout << "char: ";
 	if (Utils::isPrintable(c) == true)
 	{
-		std::cout << c;
+		std::cout << "'" << c << "'";
 	}
 	else
 	{
