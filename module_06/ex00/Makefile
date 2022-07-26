@@ -14,13 +14,13 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= convert
-SRC				:= main.cpp
+SRC				:= $(shell ls *.cpp)
 OBJ				:= $(SRC:.cpp=.o)
-INC				:=
+INC				:= $(shell ls *.hpp)
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
-CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98 -g
 INCFLAGS		:= -I $(INC_DIR)
 
 # ******************************* Other commands *******************************
