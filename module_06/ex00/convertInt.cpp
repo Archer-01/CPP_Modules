@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 18:49:48 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 19:09:15 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 20:28:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	displayChar(int num)
 {
 	std::cout << "char: ";
-	if (Utils::isPrintable(static_cast<char>(num)) == true)
+	if (Utils::isPrintable(num) == true)
 	{
 		std::cout << "'" << static_cast<char>(num) << "'";
 	}

@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:11:42 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 18:34:35 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 20:28:36 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,9 @@ bool	Utils::isDigit(char c)
 bool	Utils::isPrintable(char c)
 {
 	return (c >= ' ' && c <= '~');
+}
+
+bool	Utils::isPrintable(int c)
+{
+	return (c >= 32 && c <= 126);
 }
