@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:06:53 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 19:04:50 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 19:55:02 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 		}
 		case (Convert::DOUBLE_TYPE):
 		{
-			std::cout << "DOUBLE" << std::endl;
+			Convert::convertDouble(argv[1]);
 			break;
 		}
 		default:
