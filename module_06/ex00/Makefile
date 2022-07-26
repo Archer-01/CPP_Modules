@@ -14,13 +14,16 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= convert
-SRC				:= $(shell ls *.cpp)
+SRC				:= convertChar.cpp convertDouble.cpp convertFloat.cpp \
+					convertInt.cpp getType.cpp parseChar.cpp parseDouble.cpp \
+					parseFloat.cpp parseInt.cpp parseUnsignedInt.cpp \
+					Utils.cpp main.cpp
 OBJ				:= $(SRC:.cpp=.o)
-INC				:= $(shell ls *.hpp)
+INC				:= Convert.hpp Parsing.hpp Utils.hpp
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
-CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
 INCFLAGS		:= -I $(INC_DIR)
 
 # ******************************* Other commands *******************************
