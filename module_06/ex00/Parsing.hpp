@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.hpp                                        :+:      :+:    :+:   */
+/*   Parsing.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 13:00:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:55:07 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/26 15:47:48 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/26 16:20:21 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#ifndef PARSING_HPP
+# define PARSING_HPP
 
+# include "Utils.hpp"
 # include <string>
-# include "Parsing.hpp"
+# include <limits>
 
-typedef enum e_types
+namespace Parsing
 {
-	CHAR_TYPE,
-	INT_TYPE,
-	FLOAT_TYPE,
-	DOUBLE_TYPE,
-	UNKNOWN_TYPE
-}	t_types;
-
-t_types	getType(std::string const &literal);
+	bool	parseChar(std::string const &str);
+	bool	parseUnsignedInt(std::string const &str);
+	bool	parseInt(std::string const &str);
+	bool	parseDouble(std::string const &str);
+	bool	parseFloat(std::string const &str);
+}
 
 #endif

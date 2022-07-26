@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.hpp                                        :+:      :+:    :+:   */
+/*   parseChar.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 13:00:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:55:07 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/26 15:49:20 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/26 16:13:21 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#include "Parsing.hpp"
 
-# include <string>
-# include "Parsing.hpp"
-
-typedef enum e_types
+bool	Parsing::parseChar(std::string const &str)
 {
-	CHAR_TYPE,
-	INT_TYPE,
-	FLOAT_TYPE,
-	DOUBLE_TYPE,
-	UNKNOWN_TYPE
-}	t_types;
-
-t_types	getType(std::string const &literal);
-
-#endif
+	std::numeric_limits<char>::min();
+	return (str.length() == 1 && Utils::isDigit(str.front()) == false);
+}

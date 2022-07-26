@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.hpp                                        :+:      :+:    :+:   */
+/*   parseUnsignedInt.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 13:00:23 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 15:55:07 by hhamza           ###   ########.fr       */
+/*   Created: 2022/07/26 15:51:02 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/26 16:45:24 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#include "Parsing.hpp"
 
-# include <string>
-# include "Parsing.hpp"
-
-typedef enum e_types
+bool	Parsing::parseUnsignedInt(std::string const &str)
 {
-	CHAR_TYPE,
-	INT_TYPE,
-	FLOAT_TYPE,
-	DOUBLE_TYPE,
-	UNKNOWN_TYPE
-}	t_types;
-
-t_types	getType(std::string const &literal);
-
-#endif
+	if (str.empty() == true)
+	{
+		return (false);
+	}
+	for (size_t i = 0; i < str.length(); ++i)
+	{
+		if (Utils::isDigit(str[i]) == false)
+		{
+			return (false);
+		}
+	}
+	return (true);
+}
