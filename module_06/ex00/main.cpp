@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:06:53 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 18:37:46 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 18:56:02 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 		}
 		case (Convert::INT_TYPE):
 		{
-			std::cout << "INT" << std::endl;
+			Convert::convertInt(argv[1]);
 			break;
 		}
 		case (Convert::DOUBLE_TYPE):
