@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 19:52:52 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/26 20:06:45 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/26 20:42:02 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void	Convert::convertDouble(std::string const &literal)
 		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: " << literal << "f" << std::endl;
 		std::cout << "double: " << literal << std::endl;
+		return ;
 	}
 	num = std::stod(literal);
 	displayChar(num);
