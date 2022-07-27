@@ -21,27 +21,27 @@ static void	convert(std::string const &literal)
 		case (Convert::CHAR_TYPE):
 		{
 			Convert::convertChar(literal);
-			break;
+			break ;
 		}
 		case (Convert::FLOAT_TYPE):
 		{
 			Convert::convertFloat(literal);
-			break;
+			break ;
 		}
 		case (Convert::INT_TYPE):
 		{
 			Convert::convertInt(literal);
-			break;
+			break ;
 		}
 		case (Convert::DOUBLE_TYPE):
 		{
 			Convert::convertDouble(literal);
-			break;
+			break ;
 		}
 		default:
 		{
 			std::cout << "Unknown type" << std::endl;
-			break;
+			break ;
 		}
 	}
 }
