@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 16:35:05 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/27 17:03:53 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/27 20:37:06 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static void	increment(int &num)
 
 static void	print(int const &num)
 {
-	std::cout << std::setprecision(1);
-	std::cout << std::setiosflags(std::ios::fixed);
 	std::cout << num << std::endl;
 	return ;
 }
 
 static void	print(float const &num)
 {
+	std::cout << std::setprecision(1);
+	std::cout << std::setiosflags(std::ios::fixed);
 	std::cout << num << std::endl;
 	return ;
 }
