@@ -40,7 +40,7 @@ static void	convert(std::string const &literal)
 		}
 		default:
 		{
-			std::cout << "UNKNOWN" << std::endl;
+			std::cout << "Unknown type" << std::endl;
 			break;
 		}
 	}
