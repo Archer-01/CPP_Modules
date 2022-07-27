@@ -14,9 +14,9 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= serialization
-SRC				:= $(shell ls *.cpp)
+SRC				:= main.cpp
 OBJ				:= $(SRC:.cpp=.o)
-INC				:= $(shell ls *.hpp)
+INC				:= Data.hpp
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
