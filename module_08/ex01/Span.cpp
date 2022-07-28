@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:40:31 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 11:55:30 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 13:18:27 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,24 @@ void	Span::addNumber(int num)
 		this->_arr.push_back(num);
 		return ;
 	}
+}
+
+int	Span::shortestSpan(void) const
+{
+	std::vector<int>					sorted;
+	std::vector<int>					spans(this->_arr.size() - 1);
+	std::vector<int>::const_iterator	it;
+
+	if (this->_arr.size() < 2)
+	{
+		throw std::runtime_error("Span has less than two elements");
+	}
+	sorted = this->_arr;
+	std::sort(sorted.begin(), sorted.end());
+	for (size_t i = 0; i < spans.size(); ++i)
+	{
+		spans[i] = sorted[i + 1] - sorted[i];
+	}
+	it = std::min_element(spans.begin(), spans.end());
+	return (*it);
 }

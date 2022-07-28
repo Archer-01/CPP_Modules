@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:13:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 11:55:21 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 12:09:06 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <vector>
 # include <stdexcept>
+# include <algorithm>
 
 class Span
 {
