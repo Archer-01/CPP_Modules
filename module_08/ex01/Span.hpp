@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:13:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 12:09:06 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 16:02:34 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,22 @@ class Span
 		void	addNumber(int num);
 		int		shortestSpan(void) const;
 		int		longestSpan(void) const;
+
+		template<typename T>
+		void	addRange(typename T::const_iterator it, \
+			typename T::const_iterator ite);
 };
+
+template<typename T>
+void	Span::addRange(typename T::const_iterator it, \
+	typename T::const_iterator ite)
+{
+	while (it != ite)
+	{
+		this->addNumber(*it);
+		it++;
+	}
+	return ;
+}
 
 #endif
