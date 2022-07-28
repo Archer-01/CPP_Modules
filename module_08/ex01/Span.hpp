@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:13:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 11:39:12 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 11:55:21 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ class Span
 		std::vector<int>	_arr;
 		unsigned int const	_max_size;
 
-	public:
 		Span(void);
+
+	public:
 		Span(unsigned int N);
 		Span(Span const &src);
 		~Span(void);
