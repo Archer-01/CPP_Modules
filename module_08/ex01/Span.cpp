@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:40:31 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 13:18:27 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 13:26:56 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,18 @@ int	Span::shortestSpan(void) const
 	}
 	it = std::min_element(spans.begin(), spans.end());
 	return (*it);
+}
+
+int	Span::longestSpan(void) const
+{
+	std::vector<int>::const_iterator	max_it;
+	std::vector<int>::const_iterator	min_it;
+
+	if (this->_arr.size() < 2)
+	{
+		throw std::runtime_error("Span has less than two elements");
+	}
+	max_it = std::max_element(this->_arr.begin(), this->_arr.end());
+	min_it = std::min_element(this->_arr.begin(), this->_arr.end());
+	return (*max_it - *min_it);
 }
