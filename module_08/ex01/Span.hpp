@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:13:10 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/28 16:02:34 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/28 16:10:39 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <vector>
 # include <stdexcept>
 # include <algorithm>
+# include <iostream>
 
 class Span
 {
@@ -33,6 +34,7 @@ class Span
 		void	addNumber(int num);
 		int		shortestSpan(void) const;
 		int		longestSpan(void) const;
+		void	print(void) const;
 
 		template<typename T>
 		void	addRange(typename T::const_iterator it, \
